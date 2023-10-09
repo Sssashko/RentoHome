@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #e4e97f;
+}
+
+.navigator {
+    position: absolute;
+    background-color: rgb(125, 169, 231);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.navigator img {
+    width: 200px;
+    margin-left: 100px;
+}
+
+.navigation {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+
+}
+
+.navigation ul li {
+    display: inline-block;
+    position: relative;
+    width: auto;
+}
+
+.navigation .menu{
+    position: relative;
+}
+
+.navigation .menu .submenu {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 150px;
+    background-color: rgb(96, 152, 230);
+    display: none;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.navigation .submenu li {
+    padding: 10px ;
+}
+
+.navigation .submenu li a {
+    color: black;
+    text-decoration: none;
+    width: 50%;
+}
+
+.navigation .submenu li a:hover{
+    color: black;
+    position: relative;
+}
+
+
+.navigation .menu:hover .submenu {
+    display: block;
+}
+
+#dropdown1 {
+    margin: 0 0 0 -15px;
+}
+
+#dropdown2 {
+    margin: 0 0 0 0px ;
+}
+
+.navigation a {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    margin: 0 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    color: black;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.navigation ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigator .navigation .button-login {
+    width: 100px;
+    height: 45px;
+    margin-left: -20px;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    color: black ;
+    transition: .5s;
+}
+
+.navigator .navigation .button-login:hover {
+    background: rgb(36, 36, 36);
+    color: white; 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    margin-top: 50px;
+}
+
+.box {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128 0 rgba(0, 0, 0, 0.1)
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.form-box {
+    width: 450px;
+    margin: 0px 1px;
+}
+
+.form-box header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+
+.form-box form .field {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.btn {
+    height: 35px;
+    background: rgba(76, 68, 182, 0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.btn:hover {
+    opacity: 0.80;
+}
+
+.submit {
+    width: 100%;
+}
+
+.link {
+    margin-bottom: 15px;
+     
+}
+
+
+/*Home*/
+
+
+.nav {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 60px;
+    z-index: 100;
+    padding-top: 10px;
+}
+
+img {
+    width: 200px;
+}
+
+.right-links a{
+    padding: 0 10px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.main-box .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.top .box {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width:840px) {
+    .main-box .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top .box {
+        margin: 10px 10px;
+    }
+
+    .bottom {
+        margin-top: 0;
+    }
+    
+}

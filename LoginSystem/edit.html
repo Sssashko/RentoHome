@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Landing.html">
+    <link rel="stylesheet" href="stylelogin.css">
+    <title>Change Profile</title>
+</head>
+<body>
+    <nav class="navigator">
+        <a href="../Landing.html"><img src="../Logo.png" alt="Logo"></a>
+        <div class="list">
+            <ul class="navigation">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li class="menu"> <a href="Houses.html">Houses</a> 
+                    <ul class="submenu" id="dropdown1">
+                        <li> <a href="HtmlFiles/HousePrem.html">Premium</a> </li>
+                        <li> <a href="HtmlFiles/HouseMid.html">Middle</a></li>
+                        <li> <a href="HtmlFiles/HouseBudget.html">Budget</a></li>
+                    </ul> </li>
+                <li class="menu"> <a href="Apart.html">Apartaments</a> 
+                    <ul class="submenu" id="dropdown2">
+                        <li> <a href="HtmlFiles/ApartPrem.html">Premium</a> </li>
+                        <li> <a href="HtmlFiles/ApartMid.html">Middle</a></li>
+                        <li> <a href="HtmlFiles/ApartBudget.html">Budget</a></li>
+                    </ul></li>
+                <li> <a class="button-link" href="LoginSystem/index.html"><button class="button-login">Login</button></a> </li>
+                <li> <a class="button-link" href="LoginSystem/index.html"><button class="button-login">Profile</button></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="box form-box">
+            <header>Change Profile</header>
+            <form action="" method="post">
+                <div class="field input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" autocomplete="off" required>
+                </div>
+
+                <div class="field input">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" autocomplete="off" required>
+                </div>
+
+                <div class="field input">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" autocomplete="off" required>
+                </div>
+
+                <div class="field">
+                    <input class="btn" type="submit" name="submit" value="Login" required>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
