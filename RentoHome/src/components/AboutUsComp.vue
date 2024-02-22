@@ -26,6 +26,10 @@ import { ref } from "vue";
 
 <style scoped>
 
+section {
+    margin-bottom: 100px;
+}
+
 .hero {
     background-color: #f8f8f8;
     overflow: hidden;

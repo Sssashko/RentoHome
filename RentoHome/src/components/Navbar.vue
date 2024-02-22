@@ -7,24 +7,18 @@ import { ref } from "vue";
 
 <template>
   <nav class="navigator">
-            <a href="Landing.html"><img src="../img/Logo2.png" alt="Logo"></a>
+            <router-link to="/"><img src="../img/Logo2.png" alt="Logo"></router-link>
             <div class="list">
                 <ul class="navigation">
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li class="menu"> <a href="Houses.html">Houses</a> 
-                        <ul class="submenu" id="dropdown1">
-                            <li> <a href="HtmlFiles/HousePrem.html">Premium</a> </li>
-                            <li> <a href="HtmlFiles/HouseMid.html">Middle</a></li>
-                            <li> <a href="HtmlFiles/HouseBudget.html">Budget</a></li>
-                        </ul> </li>
-                    <li class="menu"> <a href="Apart.html">Apartaments</a> 
-                        <ul class="submenu" id="dropdown2">
-                            <li> <a href="HtmlFiles/ApartPrem.html">Premium</a> </li>
-                            <li> <a href="HtmlFiles/ApartMid.html">Middle</a></li>
-                            <li> <a href="HtmlFiles/ApartBudget.html">Budget</a></li>
-                        </ul></li>                
-                    <li> <a class="button-link" href="LoginSystem/index.html"><button class="button-login">Login</button></a> </li>
-                    <li> <a class="button-link" href="LoginSystem/index.html"><button class="button-login">Profile</button></a></li>
+                    <li id="about-us"><router-link to="aboutus">About Us</router-link></li>
+                    <div class="dropdown">
+                        <ul class="dropdown-elem"><router-link to="/HousesList">Houses</router-link></ul>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="dropdown-elem"><router-link to="/ApartList">Apartaments</router-link></ul>
+                        </div>               
+                    <li> <router-link class="button-link" to="/Login"><button class="button-login">Login</button></router-link> </li>
+                    <li> <router-link class="button-link" to="/Profile"><button class="button-login">Profile</button></router-link></li>
                 </ul>
             </div>
         </nav>
@@ -58,63 +52,21 @@ import { ref } from "vue";
     display: flex;
     align-items: center;
     text-align: center;
-    margin-bottom: 10px;
-}
-.navigation ul {
-    list-style: none;
-    display: flex;
-    width: 100%;
-
-}
-.navigation ul li {
-    display: inline-block;
-    position: relative;
-    width: auto;
+    margin: 0 50px 10px 0;
 }
 
-.navigation .menu{
-    position: relative;
+.dropdown-elem {
+    margin-right: 20px;
 }
 
-.navigation .menu .submenu {
-    position: absolute;
-    top: 33px;
-    left: 0;
-    width: 150px;
-    background-color: rgb(25, 40, 60);
-    display: none;
-    border-radius: 5px;
-    z-index: 1;
-}
-
-.navigation .submenu li {
-    width: 85%;
-    padding: 10px ;
-}
-
-.navigation .submenu li a {
-    text-decoration: none;
-    width: 50%;
-}
-
-.navigation .menu:hover .submenu {
-    display: block;
-}
-
-#dropdown1 {
-    margin: 0 0 0 -15px;
-}
-
-#dropdown2 {
-    margin: 0 0 0 0px ;
-    text-align: center;
+#about-us {
+    margin-right: 30px;
 }
 
 .navigation a {
     display: block;
     position: relative;
     font-size: 16px;
-    margin: 0 30px ;
     text-decoration: none;
     font-weight: 600;
     margin-top: 15px;
@@ -144,7 +96,7 @@ import { ref } from "vue";
 .navigator .navigation .button-login {
     width: 100px;
     height: 45px;
-    margin-left: -20px;
+    margin-left: 30px;
     background: transparent;
     border: 2px solid rgb(255, 255, 255);
     outline: none;

@@ -2,6 +2,7 @@
 
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import NavbarFix from './components/NavbarFix.vue';
 </script>
 
 <template>
@@ -24,7 +25,7 @@ body {
   display: block;
   margin: 0;
   padding: 0;
-
+  overflow-x: hidden;
 }
 
 </style>

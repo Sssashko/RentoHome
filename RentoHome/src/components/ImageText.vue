@@ -6,8 +6,20 @@
             <p class="landing-text three"> With Us!</p>
          </div>
     <div class="image-field">
-        <img id="home-main" src="../img/MainHome.jpg" alt="">
-    </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="../img/MainHome.jpg" class="d-block w-100 rounded"  alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="../img/MainHome222.jpg" class="d-block w-100 rounded" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="../img/MainHome333.jpg" class="d-block w-100 rounded" alt="...">
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -27,6 +39,9 @@ import { ref } from "vue";
     opacity: 85%;
     transition: 0.3s;
 }
+#home-main:hover {
+    transform: scale(1.03);
+}
 
 #home-main:hover {
     opacity: 100%;
@@ -38,14 +53,16 @@ import { ref } from "vue";
     justify-content: space-between;
     align-items: center;
     width: 85%;
-    margin: 12% auto;
+    margin: 12% auto 5% auto;
     animation: fadeInRight 2s ease;
     transition: 0.3s;
 }
 
-.field-text-image:hover {
-    transform: scale(1.05);
+#carouselExampleSlidesOnly {
+    width: 700px;
+
 }
+
 
 .container-text {
     text-align: center;

@@ -9,9 +9,9 @@ import { ref } from "vue";
         <h2 id="header-popular">Most Popular Choices</h2>
         <div class="grid-container">
             <div class="grid-house"> 
-                <a href="#"><img src="../img/HomeDubai.jpg" alt=""></a>
+                <router-link to="HouseApp"></router-link><img src="../img/HomeDubai.jpg" alt="">
                 <div class="all-home-text">
-                    <a href="#">First Home</a>
+                    <a href="#">Caravelle Resort</a>
                     <p id="geolocation">Dubai</p>
                     <div class="text-reviews">
                         <span id="review-grade">10.0</span> <span id="review-count">  ·	  1087 reviews</span>
@@ -22,14 +22,14 @@ import { ref } from "vue";
                         </p>
                     </div>
                     <div class="reserve-btn">
-                        <a href="#"><button>Reserve This Home</button></a>
+                        <router-link to="HouseApp"><button>Reserve This Home</button></router-link>
                     </div>
                 </div>
             </div> 
             <div class="grid-house"> 
                 <a href="#"><img src="../img/HomeDubai2.jpg" alt=""></a>
                 <div class="all-home-text">
-                    <a href="#">Second Home</a>
+                    <a href="#">The Desert Pearl</a>
                     <p id="geolocation">Berlin, German</p>
                     <div class="text-reviews">
                         <span id="review-grade">9.1</span> <span id="review-count">  ·	  589 reviews</span>
@@ -48,7 +48,7 @@ import { ref } from "vue";
             <div class="grid-house"> 
                 <a href="#"><img src="../img/HomeDubai3.jpg" alt=""></a>
                 <div class="all-home-text">
-                    <a href="#">Third Home</a>
+                    <a href="#">Sunset Haven</a>
                     <p id="geolocation">Paris, France</p>
                     <div class="text-reviews">
                         <span id="review-grade">9.5</span> <span id="review-count">  ·	  897 reviews</span>
@@ -66,7 +66,7 @@ import { ref } from "vue";
             <div class="grid-house"> 
                 <a href="#"><img src="../img/HomeGerman.jpg" alt=""></a>
                 <div class="all-home-text">
-                    <a href="#">Fourth Home</a>
+                    <a href="#">Sahara Hotel Elite</a>
                     <p id="geolocation">Jurmala, Latvia</p>
                     <div class="text-reviews">
                         <span id="review-grade">8.9</span> <span id="review-count">  ·	  456 reviews</span>
@@ -84,7 +84,7 @@ import { ref } from "vue";
             <div class="grid-house"> 
                 <a href="#"><img src="../img/HomeLatvia.jpg" alt=""></a>
                 <div class="all-home-text">
-                    <a href="#">Fifth Home</a>
+                    <a href="#">Hotele Shonshana</a>
                     <p id="geolocation">Riga, Latvia</p>
                     <div class="text-reviews">
                         <span id="review-grade">9.6</span> <span id="review-count">  ·	  1001 reviews</span>
@@ -102,7 +102,7 @@ import { ref } from "vue";
             <div class="grid-house"> 
                 <a href="#"><img src="../img/HomeParis.jpg" alt=""></a>
                 <div class="all-home-text">
-                    <a href="#">Sixth Home</a>
+                    <a href="#">Queen Of Sheba Ina</a>
                     <p id="geolocation">Paris, France</p>
                     <div class="text-reviews">
                         <span id="review-grade">9.9</span> <span id="review-count">  ·	  734 reviews</span>
@@ -154,7 +154,7 @@ import { ref } from "vue";
 .grid-house {
     border: 1px solid rgba(0, 0, 0, 0.8);
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
     font-size: 30px;
