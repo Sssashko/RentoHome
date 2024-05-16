@@ -40,7 +40,7 @@ Before getting started, make sure you have the following installed on your syste
 1. Clone the repository:
 
     bash
-    git clone https://github.com/Dimitrijevs/baltic-drive-rentals-php.git
+    git clone (https://github.com/Sssashko/RentoHome.git)
     
 
 2. Navigate to the project directory:
