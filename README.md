@@ -82,7 +82,7 @@ Before getting started, make sure you have the following installed on your syste
 
 8. Download car images from the following link and copy them to the storage directory:
 
-    [Car Images](https://drive.google.com/drive/folders/1pshFUYUZQtL1rWHarsRaohzd6HTDpq_1?usp=sharing)
+    [Houses Images](https://drive.google.com/drive/folders/1JlXCk-y1nhaOjR95UlQvWI4POhzJCYnM)
 
     After downloading, extract the images and copy the folder to: baltic-drive-rentals-php/storage/app/public/
 
