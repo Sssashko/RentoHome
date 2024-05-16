@@ -74,7 +74,7 @@ Before getting started, make sure you have the following installed on your syste
     php artisan key:generate
     ```
 
-7. Run database migrations and seed (if needed):
+7. Run database migrations:
 
     ```bash
     php artisan migrate
