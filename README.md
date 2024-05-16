@@ -84,7 +84,7 @@ Before getting started, make sure you have the following installed on your syste
 
     [Houses Images](https://drive.google.com/drive/folders/1JlXCk-y1nhaOjR95UlQvWI4POhzJCYnM)
 
-    After downloading, extract the images and copy the folder to: baltic-drive-rentals-php/storage/app/public/
+    After downloading, extract the images and copy the folder to: RentoHome/RentoHomePHP/public/
 
 9. Compile assets (JavaScript, CSS, etc.):
 
