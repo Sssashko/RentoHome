@@ -40,73 +40,67 @@ Before getting started, make sure you have the following installed on your syste
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Dimitrijevs/baltic-drive-rentals-php.git
+    git clone https://github.com/Sssashko/RentoHome.git
     ```
     
 
 2. Navigate to the project directory:
 
-    bash
+    ```bash
     cd RentoHomePHP-php
-    
+    ```
 
 3. Install PHP dependencies:
 
-    bash
+    ```bash
     composer install
-    
+    ```
 
 4. Install Node.js dependencies:
 
-    bash
+    ```bash
     npm install
-    
+    ```
 
 5. Create a copy of the .env.example file and rename it to .env:
 
-    bash
+    ```bash
     cp .env.example .env
-    
+    ```
 
 6. Generate an application key:
 
-    bash
+    ```bash
     php artisan key:generate
-    
+    ```
 
 7. Run database migrations and seed (if needed):
 
-    bash
-    php artisan migrate:fresh && php artisan db:seed --class=MainSeeder
-    
+    ```bash
+    php artisan migrate
+    ```
 
-8. Generate a symbolic link from "public/storage" to "storage/app/public":
-
-    bash
-    php artisan storage:link
-    
-
-9. Download car images from the following link and copy them to the storage directory:
+8. Download car images from the following link and copy them to the storage directory:
 
     [Car Images](https://drive.google.com/drive/folders/1pshFUYUZQtL1rWHarsRaohzd6HTDpq_1?usp=sharing)
 
     After downloading, extract the images and copy the folder to: baltic-drive-rentals-php/storage/app/public/
 
-10. Compile assets (JavaScript, CSS, etc.):
+9. Compile assets (JavaScript, CSS, etc.):
 
-    bash
+    ```bash
     npm run dev
-    
+    ```
 
-11. Start the development server:
+10. Start the development server:
 
-    bash
+    ```bash
     php artisan serve
-    
+    ```
 
     Your application will be available at http://localhost:8000.
 
-12. Visit the application in your browser:
+11. Visit the application in your browser:
 
     Open your web browser and navigate to http://localhost:8000.
 
