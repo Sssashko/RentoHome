@@ -42,7 +42,7 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('Login');
+    return redirect()->route('Login');
     }
 
 

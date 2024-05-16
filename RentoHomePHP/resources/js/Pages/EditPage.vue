@@ -1,12 +1,12 @@
 <script>
 import Navbar from './components/Navbar.vue';
-import Profile from '../Pages/components/Profile.vue';
+import EditPage from './components/EditPage.vue';
 import Footer from '../Pages/components/Footer.vue';
 
 export default {
     components: {
         Navbar,
-        Profile,
+        EditPage,
         Footer
     },
     props: {
@@ -22,11 +22,11 @@ export default {
 <template>
     <div>
         <Navbar/>
-        <Profile :user="user" />
+        <EditPage :user="user" />
         <Footer/>
     </div>
 </template>
 
-<style scoped>
+<style>
 
 </style>

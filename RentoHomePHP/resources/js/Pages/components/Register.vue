@@ -20,7 +20,7 @@
                             type="text"
                             name="name"
                             id="name"
-                            class="form-control border-primary" />
+                            class="form-control" />
                         <label class="form-label" for="name">Your Name</label>
                       </div>
                     </div>
@@ -35,6 +35,19 @@
                             class="form-control" />
                         <label class="form-label" for="email">Your Email</label>
                       </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fa-solid fa-phone fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <input
+                            v-model="form.phone"
+                                    name="phone"
+                                    id="phone"
+                                    type="text"
+                                    class="form-control" />
+                            <label class="form-label" for="phone">Your Phone Number</label>
+                        </div>
                     </div>
 
                     <div class="d-flex flex-row align-items-center mb-4">
@@ -100,6 +113,7 @@ export default {
         const form = useForm({
             name: "",
             email: "",
+            phone: "",
             password: "",
             password_confirmation: "",
         });
