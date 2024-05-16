@@ -1,7 +1,7 @@
 <script setup>
-import FilterTable from '../components/FilterTable.vue';
-import Footer from '../components/Footer.vue';
-import ApartList from '../components/ApartList.vue'
+import FilterTable from '../Pages/components/FilterTable.vue';
+import Footer from '../Pages/components/Footer.vue';
+import ApartList from '../Pages/components/ApartList.vue'
 </script>
 
 <template>
