@@ -62,37 +62,43 @@ Before getting started, make sure you have the following installed on your syste
     npm install
     ```
 
-5. Create a copy of the .env.example file and rename it to .env:
+5. Install Node.js dependencies:
+
+   ```bash
+   npm install axios
+   ```
+
+6. Create a copy of the .env.example file and rename it to .env:
 
     ```bash
     cp .env.example .env
     ```
 
-6. Generate an application key:
+7. Generate an application key:
 
     ```bash
     php artisan key:generate
     ```
 
-7. Run database migrations:
+8. Run database migrations:
 
     ```bash
     php artisan migrate
     ```
 
-8. Download car images from the following link and copy them to the storage directory:
+9. Download car images from the following link and copy them to the storage directory:
 
     [Houses Images](https://drive.google.com/drive/folders/1JlXCk-y1nhaOjR95UlQvWI4POhzJCYnM)
 
     After downloading, extract the images and copy the folder to: RentoHome/RentoHomePHP/public/
 
-9. Compile assets (JavaScript, CSS, etc.):
+10. Compile assets (JavaScript, CSS, etc.):
 
     ```bash
     npm run dev
     ```
 
-10. Start the development server:
+11. Start the development server:
 
     ```bash
     php artisan serve
@@ -100,7 +106,7 @@ Before getting started, make sure you have the following installed on your syste
 
     Your application will be available at http://localhost:8000.
 
-11. Visit the application in your browser:
+12. Visit the application in your browser:
 
     Open your web browser and navigate to http://localhost:8000.
 
