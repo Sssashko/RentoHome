@@ -47,7 +47,7 @@ Before getting started, make sure you have the following installed on your syste
 2. Navigate to the project directory:
 
     ```bash
-    cd RentoHomePHP-php
+    cd RentoHomePHP
     ```
 
 3. Install PHP dependencies:
