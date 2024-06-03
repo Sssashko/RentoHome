@@ -4,7 +4,7 @@ Laipni lūgti RentoHome! Tavs galamērķis īres mājām un dzīvokļiem visā p
 
 ## Iespējas 🌟
 - 📅 Īrē dienā vai tik ilgi, cik vēlies.
-- 💰 Sākot jau no 200 €/dienā.
+- 💰 Sākot jau no 50 €/dienā.
 - 🏠 Daudzveidīgs īpašumu piedāvājums visām taviem piedzīvojumiem.
 - 🌐 Vieglā rezervācija tiešsaistē.
 - 🆘 24/7 klientu atbalsts.
