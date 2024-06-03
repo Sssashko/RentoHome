@@ -4,7 +4,7 @@ Laipni lūgti RentoHome! Tavs galamērķis īres mājām un dzīvokļiem visā p
 
 ## Iespējas 🌟
 - 📅 Īrē dienā vai tik ilgi, cik vēlies.
-- 💰 Sākot jau no 200 €/dienā.
+- 💰 Sākot jau no 50 €/dienā.
 - 🏠 Daudzveidīgs īpašumu piedāvājums visām taviem piedzīvojumiem.
 - 🌐 Vieglā rezervācija tiešsaistē.
 - 🆘 24/7 klientu atbalsts.
@@ -47,7 +47,7 @@ Before getting started, make sure you have the following installed on your syste
 2. Navigate to the project directory:
 
     ```bash
-    cd RentoHomePHP-php
+    cd RentoHomePHP
     ```
 
 3. Install PHP dependencies:
