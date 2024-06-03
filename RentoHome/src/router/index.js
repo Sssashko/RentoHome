@@ -8,6 +8,8 @@ import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Profile from '../views/Profile.vue'
 
+Vue.use(VueRouter);
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -50,6 +52,11 @@ const router = createRouter({
       path: '/Profile',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/TermsOfUsage',
+      name: 'TermsOfUsage',
+      component: TermsOfUsage
     }
   ]
 });

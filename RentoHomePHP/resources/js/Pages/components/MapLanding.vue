@@ -15,21 +15,21 @@ import { ref } from "vue";
             <h2 class="text-center mb-4">Contact Us</h2>
             <ul class="list-group list-group-flush lead">
             <li class="list-group-item">
-            <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+            <span class="fw-bold">Main Location:</span> RVT
             </li>
             <li class="list-group-item">
-            <span class="fw-bold">Enrollment Phone:</span> (555) 555-5555
+            <span class="fw-bold">Enrollment Phone:</span> 88005555535
             </li>
             <li class="list-group-item">
-            <span class="fw-bold">Student Phone:</span> (333) 333-3333
+            <span class="fw-bold">Student Phone:</span> 12345678910
             </li>
             <li class="list-group-item">
-            <span class="fw-bold">Enrollment Email:</span> (555)
-            enroll@frontendbc.test
+            <span class="fw-bold">Enrollment Email:</span>
+            IgorsLitvakovs@rvt.lv
             </li>
             <li class="list-group-item">
             <span class="fw-bold">Student Email:</span>
-            student@frontendbc.test
+            AleksandrsOstrovskis@rvt.lv
             </li>
             </ul>
             </div>
@@ -55,9 +55,8 @@ h2 {
 }
 
 hr {
-    margin-top: 75px;
-    width: 90%;
-    margin: 75px auto;
+    margin: 80px auto 40px auto;
+    width: 82%;
 }
 
 .col-md {

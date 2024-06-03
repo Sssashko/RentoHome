@@ -1,6 +1,7 @@
 <script setup>
 import Navbar from '../Pages/components/Navbar.vue';
 import ImageText from '../Pages/components/ImageText.vue';
+import InfoCompanLand from '../Pages/components/InfoCompanLand.vue';
 import MostPopular from '../Pages/components/MostPopular.vue';
 import LandingAdvant from '../Pages/components/LandingAdvant.vue';
 import Footer from '../Pages/components/Footer.vue';

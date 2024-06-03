@@ -1,108 +1,100 @@
-<script setup >
-import { ref } from "vue";
-
-  const count = ref(0)
-
-</script>
-
 <template>
     <div class="container">
-        <div class="row">
-            <div class="service">
-                <i class="fa-solid fa-money-bill"></i>
-                <h2>Pricing</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-location-crosshairs"></i>
-                <h2>Location</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-building"></i>
-                <h2>Kitchen</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-eye"></i>
-                <h2>Bath</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-envelope"></i>
-                <h2>125 m2</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-people-group"></i>
-                <h2>Shower</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h2>Security</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-leaf"></i>
-                <h2>Eco-friendly</h2>
-            </div>
-            <div class="service washing-machine">
-                <i class="fa-solid fa-leaf"></i>
-                <h2>Washing Machine</h2>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-leaf"></i>
-                <h2>Free Parking</h2>
-            </div>
+      <div class="row">
+        <div class="service">
+          <i class="fa-solid fa-money-bill"></i>
+          <h5>Pricing</h5>
         </div>
-        <hr id="linija" />
+        <div class="service">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <h5>Location</h5>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-building"></i>
+          <h5>Kitchen</h5>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-eye"></i>
+          <h5>View</h5>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-people-group"></i>
+          <h5>Shower</h5>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h5>Security</h5>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-leaf"></i>
+          <h5>Eco-friendly</h5>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-leaf"></i>
+          <h5>Free Parking</h5>
+        </div>
+      </div>
+      <hr id="linija" />
     </div>
-</template>
+  </template>
 
-<style scoped>
-.container {
+  <script setup>
+  import { ref } from "vue";
+
+  const count = ref(0);
+  </script>
+
+  <style scoped>
+  .container {
     box-sizing: border-box;
-    width: 80%;
-    height: 200px;
-    background-color: #fff;
-    margin: 0 auto;
-}
-.row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0px));
-    grid-gap: 12px;
-    justify-content: center;
-}
+    width: 53.3%;
+    max-width: 1300px;
+    margin-top: 20px;
+    margin-left: 9%;
+  }
 
-.service {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .service {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px 10px 10px 0px;
-    width: 100x;
-    border-radius: 3px;
-    font-size: 10px;
-    cursor: pointer;
-    border: 1px solid rgb(161, 161, 161);
-    background: transparent;
-    transition: transform 0.5s, background 0.5s;
-}
-
-.washing-machine {
-    padding: 0;
-}
-
-.service i {
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.service h2 {
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 0px;
-}
-
-#linija {
-    width: 93%;
-    margin: 50px auto 0 ;
-    border: solid black 0.5px;
+    padding: 5px;
     border-radius: 5px;
-}
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    transition: transform 0.3s, background-color 0.3s;
+  }
 
-</style>
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .service i {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .service h5 {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  #linija {
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 1px;
+    width: 100%;
+    max-width: 1300px;
+  }
+  </style>

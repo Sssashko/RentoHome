@@ -1,7 +1,4 @@
 <script >
-// import AppLayout from "../Layouts/App"
-// import { Head } from "@inertiajs/inertia-vue3"
-
 export default {
     components: {
 
@@ -10,9 +7,6 @@ export default {
 </script>
 
 <template>
-    <Head title="AboutUs" />
-    <AppLayout>
-
         <section class="heor">
             <div class="heading">
                 <h1>About Us</h1>
@@ -29,14 +23,10 @@ export default {
                 </div>
             </div>
         </section>
-    </AppLayout>
 </template>
 
 <style scoped>
 
-section {
-    margin-bottom: 100px;
-}
 
 .hero {
     background-color: #f8f8f8;
@@ -47,7 +37,6 @@ section {
     color: #ff6347;
     font-size: 55px;
     text-align: center;
-    margin-top: 180px;
 }
 .container {
     display: flex;
@@ -59,7 +48,7 @@ section {
 .hero-content {
     flex: 1;
     width: 600px;
-    margin: 0px 25px;
+    margin: 0px 40px;
     animation: fadeInUp 2s ease;
 }
 .hero-content h2 {

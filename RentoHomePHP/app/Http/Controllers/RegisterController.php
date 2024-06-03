@@ -23,6 +23,7 @@ class RegisterController extends Controller
             'phone' => $request->phone,
             'password' => bcrypt($request->password),]);
 
-            return redirect()->route('HomePage')->with('message', 'Register Succesfully');
+            return redirect()->route('HomePage')
+            ->with('message', 'Register Successfully');
     }
 }

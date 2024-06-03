@@ -1,41 +1,41 @@
 <template>
-    <div class="container p-5" id="container">
-        <form @submit.prevent="form.post('EditPage')">
-
-        <!-- Name -->
-    <div class="form-group mt-2">
+    <div class="container pb-5" id="container">
+    <form @submit.prevent="form.post('EditPage')" class="rounded shadow bg-light p-4">
+      <!-- Name -->
+      <div class="form-group mt-2">
         <label class="form-label" for="name">Your Name</label>
         <input
-        v-model="form.name"
-            type="text"
-            name="name"
-            id="name"
-            class="form-control"
-            placeholder="Enter Name" />
-    </div>
-
+          v-model="form.name"
+          type="text"
+          name="name"
+          id="name"
+          class="form-control"
+          placeholder="Enter Name">
+      </div>
         <!-- Email -->
-    <div class="form-group mt-2">
-        <label for="exampleInputEmail1">Email address</label>
-        <input v-model="form.email"
-                name="email"
-                id="email"
-                type="email"
-                class="form-control"
-                aria-describedby="emailHelp"
-                placeholder="Enter email">
+        <div class="form-group mt-2">
+        <label class="form-label" for="email">Email address</label>
+        <input
+          v-model="form.email"
+          name="email"
+          id="email"
+          type="email"
+          class="form-control"
+          placeholder="Enter email"
+          aria-describedby="emailHelp">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else(maybe).</small>
-    </div>
+      </div>
 
       <!-- Phone Number -->
       <div class="form-group mt-2">
-        <label for="exampleInputPassword1">Phone Number</label>
-        <input v-model="form.phone"
-                type="phone"
-                name="phone"
-                id="phone"
-                class="form-control"
-                placeholder="Phone Number">
+        <label class="form-label" for="phone">Phone Number</label>
+        <input
+          v-model="form.phone"
+          type="phone"
+          name="phone"
+          id="phone"
+          class="form-control"
+          placeholder="Phone Number">
       </div>
 
       <!-- Password -->
@@ -48,7 +48,7 @@
                 class="form-control"
                 placeholder="Password">
       </div> -->
-      <button type="submit" class="btn btn-primary mt-2">Submit</button>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
     </div>
 </template>
@@ -83,7 +83,20 @@ export default {
 </script>
 
 <style>
-#container{
-    margin-top: 75px;
+#container {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}
+
+.btn-primary {
+  border-radius: 0.5rem;
+}
+
+.invalid-feedback {
+  color: #dc3545;
 }
 </style>

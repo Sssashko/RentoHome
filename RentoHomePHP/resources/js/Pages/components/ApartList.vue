@@ -1,10 +1,10 @@
 <template>
     <div class="main">
-        <NavbarFix/>
         <h2 class="text-center mb-3">Seacrh For Perfect Apartaments</h2>
         <div class="container py-4" style="max-width: 90%;">
             <div class="filter-table">
                 <h3>Country</h3>
+                <hr>
                 <div>
                     <label for="LatviaCheckbox"> <input type="checkbox" id="LatviaCheckbox">Latvia</label>
                 </div>
@@ -34,16 +34,16 @@
                 <hr>
                 <h3>Price</h3>
                 <div>
-                    <label for="100Checkbox"> <input type="checkbox" id="100Checkbox">-100$</label>
+                    <label for="100Checkbox"> <input type="checkbox" id="100Checkbox">Under 100$</label>
                 </div>
                 <div>
-                    <label for="100-200Checkbox"> <input type="checkbox" id="100-200Checkbox">100 - 200$</label>
+                    <label for="100-200Checkbox"> <input type="checkbox" id="100-199Checkbox">100 - 199$</label>
                 </div>
                 <div>
-                    <label for="200-300Checkbox"> <input type="checkbox" id="200-300Checkbox">200 - 300$</label>
+                    <label for="200-300Checkbox"> <input type="checkbox" id="200-299Checkbox">200 - 299$</label>
                 </div>
                 <div>
-                    <label for="300-400Checkbox"> <input type="checkbox" id="300-400Checkbox">300 - 400$</label>
+                    <label for="300-400Checkbox"> <input type="checkbox" id="300-399Checkbox">300 - 399$</label>
                 </div>
                 <div>
                     <label for="400Checkbox"> <input type="checkbox" id="400Checkbox">400+ $</label>
@@ -51,92 +51,72 @@
                 <hr>
                 <h3>Square</h3>
                 <div>
-                    <label for="100m2Checkbox"> <input type="checkbox" id="100m2Checkbox">-100 m2</label>
+                    <label for="100m2Checkbox"> <input type="checkbox" id="100m2Checkbox">Under 100 ㎡</label>
                 </div>
                 <div>
-                    <label for="100-125m2Checkbox"> <input type="checkbox" id="100-125m2Checkbox">100 - 125 m2</label>
+                    <label for="100-125m2Checkbox"> <input type="checkbox" id="100-124m2Checkbox">100 - 124 ㎡</label>
                 </div>
                 <div>
-                    <label for="125-150m2Checkbox"> <input type="checkbox" id="125-150m2Checkbox">125 - 150 m2</label>
+                    <label for="125-150m2Checkbox"> <input type="checkbox" id="125-149m2Checkbox">125 - 149 ㎡</label>
                 </div>
                 <div>
-                    <label for="150-200m2Checkbox"> <input type="checkbox" id="150-200m2Checkbox">150 - 200 m2</label>
+                    <label for="150-200m2Checkbox"> <input type="checkbox" id="150-199m2Checkbox">150 - 199 ㎡</label>
                 </div>
                 <div>
-                    <label for="200m2Checkbox"> <input type="checkbox" id="200m2Checkbox">200+ m2</label>
+                    <label for="200m2Checkbox"> <input type="checkbox" id="200m2Checkbox">200+ ㎡</label>
                 </div>
                 <hr>
             </div>
-            <div class="row row-cols-3 g-3 ">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../../../public/img/apart1.webp" class="card-img-top" alt="...">
+            <div class="row g-5 w-100 ">
+                <div class="col-4" v-for="apartament in apartaments" :key="apartament.id">
+                    <div class="card">
+                        <img :src="apartament.image" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h4 class="card-title">Dunes Village</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <h5>50$ Per Night</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <p class="card-title h5 mb-0">{{ apartament.title }}</p>
+                                <p class="text-center mb-0 text">({{ apartament.country }})</p>
+                            </div>
+                            <p class="card-text">{{ apartament.description }} This Apartament Area: {{ apartament.square }}㎡</p>
+                            <h5>{{ apartament.price }} Per Night</h5>
                             <a href="#" class="btn btn-primary">Go On House Page</a>
                         </div>
                     </div>
                 </div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../../../../public/img/apart2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h4 class="card-title">Grandes Shores</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h5>150$ Per Night</h5>
-                                <a href="#" class="btn btn-primary">Go On House Page</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../../../../public/img/apart3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h4 class="card-title">The Palace Unit 305</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h5>225$ Per Night</h5>
-                                <a href="#" class="btn btn-primary">Go On House Page</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../../../../public/img/apart4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h4 class="card-title">Grande Cayman Resort</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h5>1000$ Per Night</h5>
-                                <a href="#" class="btn btn-primary">Go On House Page</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../../../../public/img/apart5.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h4 class="card-title">Aqua Beach</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h5>390$ Per Night</h5>
-                                <a href="#" class="btn btn-primary">Go On House Page</a>
-                            </div>
-                        </div>
-                    </div>
-
             </div>
         </div>
     </div>
 </template>
 
-<script setup>
-    import NavbarFix from './NavbarFix.vue';
+<script >
+
+import { Link } from "@inertiajs/vue3";
+import { router } from '@inertiajs/vue3';
+import axios from "axios";
+
+export default {
+  components: {
+    Link,
+  },
+  props: {
+    Object,
+    apartaments: Array
+  }
+}
+
 </script>
 
 <style scoped>
 
+.text {
+    font-size: 17px;
+}
+
 .main {
     margin-bottom: 100px;
+}
+
+.card-title{
+    font-size: 20px;
 }
 
 .container {
@@ -178,7 +158,7 @@ h3 {
 }
 
 h2 {
-    margin-top: 120px;
+    margin-top: 50px;
     font-weight: 500;
     font-size: 44px;
 }

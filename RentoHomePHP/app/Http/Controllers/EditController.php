@@ -14,7 +14,7 @@ class EditController extends Controller
     public function update(Request $request ){
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'phone' => 'required|string|max:20',
+            'phone' => 'required|string|max:20|min:8|regex:/^\d+$/',
             'email' => 'required|string|email|max:255']
         );
 

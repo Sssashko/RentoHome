@@ -1,30 +1,25 @@
-<script >
+<script>
 import Navbar from './components/Navbar.vue';
-import FilterTable from '../Pages/components/FilterTable.vue';
 import Footer from '../Pages/components/Footer.vue';
-import ApartList from '../Pages/components/ApartList.vue'
-import NavbarFix from './components/NavbarFix.vue';
+import TermsOfUsagePageText from '../Pages/components/TermsOfUsagePageText.vue';
 import axios from 'axios';
-
 
 export default {
   components: {
-    ApartList,
     Navbar,
-    FilterTable,
+    TermsOfUsagePageText,
     Footer,
-    NavbarFix
   },
   data() {
     return {
-      apartaments: []
+      terms: []
     };
   },
   created() {
     axios
-    .get('http://localhost:8000/api/ApartList')
+    .get('http://localhost:8000/api/TermsOfUsage')
     .then(response => {
-        this.apartaments = response.data;
+        this.terms = response.data;
       })
     .catch(error => {
         console.log(error);
@@ -37,12 +32,11 @@ export default {
 <template>
     <div>
         <Navbar/>
-        <FilterTable/>
-        <ApartList :apartaments="apartaments"/>
+        <TermsOfUsagePageText :terms="terms"/>
         <Footer/>
     </div>
 </template>
 
-<style scoped>
+<style>
 
 </style>

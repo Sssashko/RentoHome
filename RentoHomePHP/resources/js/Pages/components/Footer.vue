@@ -4,13 +4,7 @@
             <img src="../../../../public/img/Logo2.png" alt="">
 
             <p class="footer-links">
-                <!-- <Link :href="router('#')">Home</Link> -->
-                |
-                <!-- <Link :href="router('#')">About</Link> -->
-                |
-                <!-- <Link :href="router('#')">Contact</Link> -->
-                |
-                <!-- <Link :href="router('#')">Blog</Link> -->
+                <Link :href="route('TermsOfUsage')" method="get" class="link" >Terms Of Usage</Link>
             </p>
 
             <p class="footer-company-name"> Copyright © 2023 <strong>SashkoOstrov</strong> All rights reserved</p>
@@ -55,7 +49,11 @@ import { router } from '@inertiajs/vue3';
 export default {
     components: {
         Link
-    }
+    },
+    props: {
+        posts: Object
+    },
+
 }
 </script>
 

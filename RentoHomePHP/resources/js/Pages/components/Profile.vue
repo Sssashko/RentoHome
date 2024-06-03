@@ -1,175 +1,151 @@
 <template>
-<section style="background-color: #eee;">
-  <div class="container py-5 mt-5">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body text-center">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-              class="rounded-circle img-fluid" style="width: 150px;">
-            <h5 class="my-3"> {{ user.name }} </h5>
-            <p class="text-muted mb-1">Full Stack Developer</p>
-            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-            <div class="d-flex justify-content-center mb-2">
-              <button @click="destroy(user.id)" type="submit" class="btn btn-danger d-block py-2 width-216 ms-1">
+    <section style="background-color: #eee;">
+      <div class="container pt-0 pb-2 mt-0">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                <h5 class="my-3">{{ user.name }}</h5>
+                <p class="text-muted mb-1">Full Stack Developer</p>
+                <p class="text-muted mb-4">RVT</p>
+                <div class="d-flex justify-content-center mb-2">
+                  <button @click="destroy(user.id)" type="submit" class="btn btn-danger d-block py-2 width-216 ms-1">
                     <i class="bi bi-trash-fill me-2"></i> Delete Account
-                </button>
-              <Link class="btn btn-warning d-block py-2 width-216 ms-1" :href="route('EditPage')">Edit Profile</Link>
-                <!-- <li class="mb-1 mt-0">
-                        <Link :href="route('edit', { user: $page.props.auth })" class="btn btn-primary d-block py-2">
-                            <i class="bi bi-person-lines-fill me-2"></i> Edit Profile
-                        </Link>
-                    </li> -->
+                  </button>
+                  <Link class="btn btn-warning d-block py-2 width-216 ms-1" :href="route('EditPage')">Edit Profile</Link>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4 mb-lg-0">
+                <div class="card mb-4 mb-lg-0">
+                <div class="card-body p-0">
+                    <ul class="list-group list-group-flush rounded-3">
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div class="d-flex align-items-center">
+                        <span class="icon me-2"><i class="fa-solid fa-face-smile text-yellow"></i></span>
+                        <span class="label ">Name:</span>
+                        </div>
+                        <span class="value">{{ user.name }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div class="d-flex align-items-center">
+                        <span class="icon me-2"><i class="fa-solid fa-envelope"></i></span>
+                        <span class="label">Phone Number:</span>
+                        </div>
+                        <span class="value">{{ user.phone }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div class="d-flex align-items-center">
+                        <span class="icon me-2"><i class="fa-solid fa-phone"></i></span>
+                        <span class="label">Email:</span>
+                        </div>
+                        <span class="value">{{ user.email }}</span>
+                    </li>
+                    </ul>
+                </div>
+                </div>
             </div>
           </div>
-        </div>
-        <div class="card mb-4 mb-lg-0">
-          <div class="card-body p-0">
-            <ul class="list-group list-group-flush rounded-3">
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fas fa-globe fa-lg text-warning"></i>
-                <p class="mb-0">https://mdbootstrap.com</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                <p class="mb-0">Sashko</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                <p class="mb-0">@mdbootstrap</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                <p class="mb-0">mdbootstrap</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                <p class="mb-0">mdbootstrap</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Name</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ user.name }}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ user.email }}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ user.phone }}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Address</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-              <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-              <div>
-                <p class="mb-0  text-center">Rent History</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">example@example.com</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Address</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title mb-4">Rent History</h5>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Property</th>
+                        <th>Status</th>
+                        <th>Reserved</th>
+                        <th>Planned Move-in Date</th>
+                        <th>Overall Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>House</td>
+                        <td><span class="badge bg-success">Reserved</span></td>
+                        <td>June 15, 2024</td>
+                        <td>July 1, 2024</td>
+                        <td>$2000/month</td>
+                      </tr>
+                      <tr>
+                        <td>Apartment</td>
+                        <td><span class="badge bg-secondary">Not Reserved</span></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                      </tr>
+                      <!-- Add more rows for additional rent history entries -->
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</section>
-</template>
+    </section>
+  </template>
 
-<script>
-import { Link } from "@inertiajs/vue3";
-import { router } from '@inertiajs/vue3';
+  <script>
+  import { Link } from "@inertiajs/vue3";
+  import { router } from '@inertiajs/vue3';
 
-export default{
-    components:{
-        Link
+  export default {
+    components: {
+      Link
     },
     props: {
-        user: {
-            type: Object,
-            required:true,
-        }
+      user: {
+        type: Object,
+        required: true,
+      }
     },
     setup() {
-        const destroy = (id) => {
-            if (confirm("Are you sure?")) {
-                router.delete(route("delete", id));
-            }
-        };
+      const destroy = (id) => {
+        if (confirm("Are you sure?")) {
+          router.delete(route("delete", id));
+        }
+      };
 
-        return { destroy };
-},
-}
+      return { destroy };
+    },
+  }
+  </script>
 
-</script>
+  <style>
+    section {
+      padding: 50px 0; /* Increase padding */
+    }
 
-<style scoped>
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-</style>
+    .card-title {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1.5rem; /* Increase margin */
+    }
+
+    .table {
+      margin-bottom: 0;
+    }
+
+    .table th,
+    .table td {
+      padding: 1rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+
+    .badge {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+    }
+
+  </style>

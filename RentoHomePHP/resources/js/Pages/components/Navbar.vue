@@ -1,4 +1,4 @@
-<script >
+<script>
 import { Link } from "@inertiajs/vue3";
 import { router } from '@inertiajs/vue3';
 
@@ -9,131 +9,140 @@ export default {
     props: {
         posts: Object
     },
-
 }
 </script>
 
 <template>
-  <nav class="navigator">
-        <Link :href="route('HomePage')"><img src="../../../../public/img/Logo2.png" alt="Logo"></Link>
-            <div class="list">
-                <ul class="navigation">
-                    <li id="about-us"><Link class="link" :href="route('AboutUs')">About Us</Link></li>
-                    <div class="dropdown">
-                        <ul class="dropdown-elem"><Link class="link" :href="route('HousesList')">Houses</Link></ul>
-                    </div>
-                    <div class="dropdown">
-                        <ul class="dropdown-elem"><Link class="link" :href="route('ApartList')">Apartaments</Link></ul>
-                    </div>
-                    <li v-if="!$page.props.auth"> <Link :href="route('Login')" class="link"><button class="button-login">Login</button></Link></li>
-                    <div v-if="$page.props.auth">
-                        <Link :href="route('logout')" method="post" class="link"><button class="button-login">Log out</button></Link>
-                    </div>
-                    <li v-if="$page.props.auth"> <Link :href="route('Profile')" class="link"><button class="button-login">Profile</button></Link></li>
+    <nav class="navigator navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex">
+            <Link :href="route('HomePage')" class="navbar-brand">
+            <img src="../../../../public/img/Logo2.png" alt="Logo" class="logo">
+            </Link>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-3">
+                        <Link class="nav-link" :href="route('AboutUs')">About Us</Link>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        Houses
+                        </Link>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <Link class="dropdown-item" :href="route('HousesList')">View All</Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        Apartments
+                        </Link>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <Link class="dropdown-item" :href="route('ApartList')">View All</Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3" v-if="!$page.props.auth">
+                        <Link :href="route('Login')" class="btn btn-outline-light">Login</Link>
+                    </li>
+                    <li class="nav-item me-3" v-if="$page.props.auth">
+                        <Link :href="route('logout')" method="post" class="btn btn-outline-light">Log out</Link>
+                    </li>
+                    <li class="nav-item" v-if="$page.props.auth">
+                        <Link :href="route('Profile')" class="btn btn-outline-light btn-profile">Profile</Link>
+                    </li>
                 </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+
 </template>
 
 <style scoped>
 .navigator {
-    position: absolute;
     background-color: rgb(16, 25, 38);
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    margin: 0;
+    padding: 10px 0;
 }
 
-.navigator img {
-    width: 200px;
-    margin-left: 100px;
-    align-items: center;
-    display: flex;
+.logo {
+    width: 150px;
+    margin-left: 50px;
 }
 
-.navigation {
-    list-style: none;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 0 50px 10px 0;
-}
-
-.dropdown-elem {
+.navbar-nav .nav-link {
+    color: rgb(255, 255, 255) !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
     margin-right: 20px;
 }
 
-#about-us {
-    margin-right: 30px;
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+    text-decoration: underline;
 }
 
-.navigation .link {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 15px;
+.dropdown-menu {
+    background-color: rgb(16, 25, 38);
+}
+
+.dropdown-item {
+    color: rgb(255, 255, 255) !important;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: white !important;
+}
+
+.btn-outline-light {
+    border-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    text-align: center;
-    transition: all 0.25s ease;
-
+    border: 2px solid white;
 }
 
-.navigation ul li .link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    width: 100%;
-    height: 3px;
-    background: white;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: transform .5s;
+.btn-outline-light:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(16, 25, 38);
 }
 
-.navigation ul li .link:hover::after {
-    transform: scaleX(1);
+.btn-profile {
+    margin-right: 40px;
+    border: 10px solid white;
 }
 
-.navigator .navigation .button-login {
-    width: 100px;
-    height: 45px;
-    margin-left: 30px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255);
-    outline: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 16px;
+.nav-item {
     font-weight: 600;
-    color: rgb(255, 255, 255) ;
-    transition: .5s;
 }
 
-.navigator .navigation .button-login:hover {
-    background: rgb(255, 255, 255);
-    color: black;
-}
-
-@media (max-width: 900px){
-    .navbar {
-        padding: 10px 20px;
+@media (max-width: 900px) {
+    .navbar-brand {
+        margin-left: 20px;
     }
 
-    .nav-list {
-        position: absolute;
-        width: 100%;
-        top: 66px;
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 0;
+        /* Reset margin-right for small screens */
+    }
+
+    .btn-outline-light {
+        margin-left: 0;
+        /* Reset margin-left for small screens */
     }
 }
-
 </style>

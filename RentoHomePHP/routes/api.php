@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HousesListController;
+use App\Http\Controllers\ApartListController;
+use App\Http\Controllers\TermController;
+use App\Models\Apartament;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/HousesList', [HousesListController::class, 'housesapi']);
+
+Route::get('/ApartList', [ApartListController::class, 'apartamentsapi']);
+
+Route::get('/TermsOfUsage', [TermController::class, 'termsapi']);

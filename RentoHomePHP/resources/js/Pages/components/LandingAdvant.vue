@@ -50,7 +50,7 @@
 import { ref } from "vue";
 
   const count = ref(0)
-  
+
 </script>
 
 
@@ -59,7 +59,7 @@ import { ref } from "vue";
 .container {
     box-sizing: border-box;
     width: 100%;
-    height: 700px;
+    height: 650px;
     padding: 0 0;
     background-color: #fff;
 }
@@ -67,7 +67,7 @@ import { ref } from "vue";
 .container h1 {
     text-align: center;
     padding-top: 3%;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-weight: 600;
     position: relative;
 }
