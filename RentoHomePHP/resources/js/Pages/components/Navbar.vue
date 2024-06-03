@@ -114,8 +114,8 @@ export default {
 }
 
 .btn-profile {
-    margin-right: 40px;
-    border: 10px solid white;
+    margin-left: 20px;
+    border: 2px solid white;
 }
 
 .nav-item {
