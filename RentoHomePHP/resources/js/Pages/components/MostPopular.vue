@@ -130,12 +130,12 @@
   .card {
     height: 100%;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.9; /* Initial opacity */
+    opacity: 0.9;
   }
 
   .card:hover {
     transform: scale(1.05);
-    opacity: 1; /* Hovered opacity */
+    opacity: 1;
   }
 
   img {

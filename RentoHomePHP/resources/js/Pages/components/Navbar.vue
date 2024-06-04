@@ -137,12 +137,10 @@ export default {
 
     .navbar-nav .nav-link {
         margin-right: 0;
-        /* Reset margin-right for small screens */
     }
 
     .btn-outline-light {
         margin-left: 0;
-        /* Reset margin-left for small screens */
     }
 }
 </style>

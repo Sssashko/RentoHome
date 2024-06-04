@@ -58,6 +58,15 @@ class ApartamentSeeder extends Seeder
                 'price' =>  390,
                 'square' => 250
             ],
+            [
+                'image' => "img/MainHome.jpg",
+                'title' => "Kalamandra Opokora",
+                'description' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                'country' => 'German',
+                'comfortability' => 'Premium',
+                'price' => 105.5,
+                'square' => 325
+            ],
         ];
 
         foreach ($apartaments as $apartament) {

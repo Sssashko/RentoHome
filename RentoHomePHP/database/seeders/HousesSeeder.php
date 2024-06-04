@@ -62,6 +62,15 @@ class HousesSeeder extends Seeder
                 'price' =>  400,
                 'square' => 250
             ],
+            [
+                'image' => "img/HomeParis.jpg",
+                'title' => "Samatoma Sekara",
+                'description' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                'country' => 'German',
+                'comfortability' => 'Middle',
+                'price' => 125.5,
+                'square' => 205.5
+            ]
         ];
 
         foreach ($houses as $house) {

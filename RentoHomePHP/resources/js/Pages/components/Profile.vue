@@ -77,7 +77,6 @@
                         <td>N/A</td>
                         <td>N/A</td>
                       </tr>
-                      <!-- Add more rows for additional rent history entries -->
                     </tbody>
                   </table>
                 </div>
@@ -117,7 +116,7 @@
 
   <style>
     section {
-      padding: 50px 0; /* Increase padding */
+      padding: 50px 0;
     }
 
     .card {
@@ -128,7 +127,7 @@
     .card-title {
       font-size: 1.5rem;
       color: #333;
-      margin-bottom: 1.5rem; /* Increase margin */
+      margin-bottom: 1.5rem;
     }
 
     .table {
