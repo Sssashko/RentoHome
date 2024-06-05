@@ -13,10 +13,11 @@ export default {
 </script>
 
 <template>
+
     <nav class="navigator navbar navbar-expand-lg navbar-dark">
         <div class="container d-flex">
             <Link :href="route('HomePage')" class="navbar-brand">
-            <img src="../../../../public/img/Logo2.png" alt="Logo" class="logo">
+                <img src="../../../../public/img/Logo2.png" alt="Logo" class="logo">
             </Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,27 +28,11 @@ export default {
                     <li class="nav-item me-3">
                         <Link class="nav-link" :href="route('AboutUs')">About Us</Link>
                     </li>
-                    <li class="nav-item dropdown me-3">
-                        <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Houses
-                        </Link>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <Link class="dropdown-item" :href="route('HousesList')">View All</Link>
-                            </li>
-                        </ul>
+                    <li class="nav-item me-3">
+                        <Link class="nav-link" :href="route('HousesList')">Houses</Link>
                     </li>
-                    <li class="nav-item dropdown me-3">
-                        <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Apartments
-                        </Link>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <Link class="dropdown-item" :href="route('ApartList')">View All</Link>
-                            </li>
-                        </ul>
+                    <li class="nav-item me-3">
+                        <Link class="nav-link" :href="route('ApartList')">Apartments</Link>
                     </li>
                     <li class="nav-item me-3" v-if="!$page.props.auth">
                         <Link :href="route('Login')" class="btn btn-outline-light">Login</Link>
@@ -65,7 +50,8 @@ export default {
 
 </template>
 
-<style scoped>
+<style>
+
 .navigator {
     background-color: rgb(16, 25, 38);
     padding: 10px 0;
@@ -77,29 +63,12 @@ export default {
 }
 
 .navbar-nav .nav-link {
-    color: rgb(255, 255, 255) !important;
+    position: relative;
     font-weight: 600;
-    transition: color 0.3s ease;
     margin-right: 20px;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #007bff !important;
-    text-decoration: underline;
-}
-
-.dropdown-menu {
-    background-color: rgb(16, 25, 38);
-}
-
-.dropdown-item {
+    text-decoration: none;
+    transition: color 0.4s ease;
     color: rgb(255, 255, 255) !important;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-item:hover {
-    background-color: #007bff;
-    color: white !important;
 }
 
 .btn-outline-light {
@@ -143,4 +112,5 @@ export default {
         margin-left: 0;
     }
 }
+
 </style>
