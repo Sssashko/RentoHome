@@ -25,6 +25,8 @@
 
 <script setup>
 import { ref } from "vue";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap';
 
 const count = ref(0)
 </script>
@@ -49,11 +51,10 @@ const count = ref(0)
 }
 
 .field-text-image {
-    margin: 200px 0 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 80%;
     margin: 3% auto 5% auto;
     animation: fadeInRight 2s ease;
     transition: 0.3s;
@@ -61,6 +62,7 @@ const count = ref(0)
 
 #carouselExampleSlidesOnly {
     width: 700px;
+    transition: transform 0.5s ease;
 }
 
 .container-text {
@@ -70,21 +72,16 @@ const count = ref(0)
 }
 
 .landing-text {
+    font-family: 'Raleway', sans-serif;
     font-size: 48px;
-    margin-bottom: 0;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.one {
-    font-weight: bold;
-}
-
-.two {
-    font-style: italic
-}
-
-.three {
-    font-weight: bold;
-    font-style: italic;
+.one, .two, .three {
+    margin-bottom: 5px;
+    color: #333;
 }
 
 @keyframes fadeInUp {
