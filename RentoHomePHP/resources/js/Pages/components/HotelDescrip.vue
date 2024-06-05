@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <hr class="bottom-line">
       <div class="first-text">
         <p>
           Set in Myrtle Beach, 8.3 km from Broadway at the Beach and 8.6 km from Myrtle Beach Boardwalk, Serene Myrtle Beach Condo with Community Pool! offers air conditioning.
@@ -13,7 +14,7 @@
 
         <p>
           The Market Common is 13 km from the apartment, while Myrtle Beach State Park is 13 km away.
-          The nearest airport is Myrtle Beach International Airport, 13 km from Serene Myrtle Beach Condo with Community Pool!.
+          The nearest airport is Myrtle Beach International Airport, 13 km from Serene Myrtle Beach Condo with Community Pool!
         </p>
       </div>
     </div>
@@ -26,15 +27,24 @@
   </script>
 
   <style scoped>
+
+.bottom-line {
+    border: 1px solid black;
+    border-radius: 1px;
+    margin: 20px 100px 20px 0;
+    width: 100%;
+    max-width: 1000px;
+}
+
   .container {
-    width: 54.5%;
-    max-width: 1300px; /* Adjust as needed */
-    margin: 20px auto 50px 8.5%;
+    width: 51%;
+    max-width: 1300px;
+    margin: 0px auto 20px 11.2%;
   }
 
   p {
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.6; /* Adjust line height */
-    margin-bottom: 20px; /* Adjust margin bottom */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
   </style>

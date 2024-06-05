@@ -3,6 +3,10 @@
         <h2 class="text-center mb-3">Seacrh For Perfect Apartaments</h2>
         <div class="container py-4" style="max-width: 90%;">
             <div class="filter-table">
+                <div class="search-bar mb-4">
+                    <input type="text" v-model="searchQuery" placeholder="Search by Hotel Name" @input="searchHouses" />
+                </div>
+                <hr>
                 <h3>Sort By</h3>
                 <div class="sort-dropdown">
                     <select id="sortOptions" @change="sortHouses" v-model="sortBy">
@@ -153,6 +157,20 @@ export default {
 </script>
 
 <style scoped>
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
 .sort-dropdown {
     position: relative;

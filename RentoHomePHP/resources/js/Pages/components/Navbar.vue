@@ -13,7 +13,6 @@ export default {
 </script>
 
 <template>
-
     <nav class="navigator navbar navbar-expand-lg navbar-dark">
         <div class="container d-flex">
             <Link :href="route('HomePage')" class="navbar-brand">
@@ -47,11 +46,9 @@ export default {
             </div>
         </div>
     </nav>
-
 </template>
 
-<style>
-
+<style scoped>
 .navigator {
     background-color: rgb(16, 25, 38);
     padding: 10px 0;
@@ -69,6 +66,23 @@ export default {
     text-decoration: none;
     transition: color 0.4s ease;
     color: rgb(255, 255, 255) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: white;
+    transition: width 0.4s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
 }
 
 .btn-outline-light {
@@ -112,5 +126,4 @@ export default {
         margin-left: 0;
     }
 }
-
 </style>

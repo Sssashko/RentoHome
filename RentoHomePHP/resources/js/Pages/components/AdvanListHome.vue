@@ -34,7 +34,6 @@
         <h5>Free Parking</h5>
       </div>
     </div>
-    <hr id="linija" />
   </div>
 </template>
 
@@ -47,10 +46,10 @@ const count = ref(0);
 <style scoped>
 .container {
   box-sizing: border-box;
-  width: 53.3%;
+  width: 49.8%;
   max-width: 1300px;
   margin-top: 20px;
-  margin-left: 9%;
+  margin-left: 11.7%;
 }
 
 .row {

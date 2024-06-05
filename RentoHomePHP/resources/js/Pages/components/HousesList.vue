@@ -4,6 +4,10 @@
         <h2 class="text-center mb-3">Search For Perfect Houses</h2>
         <div class="container py-4" style="max-width: 90%;">
             <div class="filter-table">
+                <div class="search-bar mb-4">
+                    <input type="text" v-model="searchQuery" placeholder="Search by Hotel Name" @input="searchHouses" />
+                </div>
+                <hr>
                 <h3>Sort By</h3>
                 <div class="sort-dropdown">
                     <select id="sortOptions" @change="sortHouses" v-model="sortBy">
@@ -115,7 +119,7 @@
                     </label>
                 </div>
             </div>
-            <div class="row g-5 w-100">
+            <div class="row gx-5 w-100">
                 <div class="col-4" v-for="house in sortedHouses" :key="house.id">
                     <div class="card">
                         <img :src="house.image" class="card-img-top" alt="...">
@@ -158,6 +162,7 @@ export default {
             selectedPrices: [],
             selectedSquares: [],
             sortBy: null,
+            searchQuery: "",
         };
     },
     computed: {
@@ -202,7 +207,9 @@ export default {
                 });
             }
 
-            return filtered;
+            return filtered.filter(house =>
+                house.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
         },
         sortedHouses() {
             let sorted = [...this.filteredHouses];
@@ -271,14 +278,31 @@ export default {
                 }
             }
         },
+        searchHouses() {
+            this.filteredHouses();
+        },
     },
 };
 
 </script>
 
 
+
 <style scoped>
 
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
 .sort-dropdown {
     position: relative;
