@@ -243,8 +243,8 @@
 .bottom-line {
     border: 1px solid black;
     border-radius: 1px;
-    margin: 20px 100px 40px -5px;
+    margin: 20px 100px 40px -10px;
     width: 100%;
-    max-width: 835px;
+    max-width: 845px;
 }
   </style>

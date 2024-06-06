@@ -42,6 +42,9 @@ export default {
                     <li class="nav-item" v-if="$page.props.auth">
                         <Link :href="route('Profile')" class="btn btn-outline-light btn-profile">Profile</Link>
                     </li>
+                    <!-- <li class="nav-item me-3" v-if="!$page.props.auth">
+                        <Link :href="route('Admin')" class="btn btn-outline-light">Admin</Link>
+                    </li> -->
                 </ul>
             </div>
         </div>

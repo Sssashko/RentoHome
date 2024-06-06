@@ -37,9 +37,9 @@
 }
 
   .container {
-    width: 51%;
+    width: 54.5%;
     max-width: 1300px;
-    margin: 0px auto 20px 11.2%;
+    margin: 0px auto 20px 8.5%;
   }
 
   p {

@@ -46,10 +46,10 @@ const count = ref(0);
 <style scoped>
 .container {
   box-sizing: border-box;
-  width: 49.8%;
+  width: 53.4%;
   max-width: 1300px;
   margin-top: 20px;
-  margin-left: 11.7%;
+  margin-left: 9%;
 }
 
 .row {
